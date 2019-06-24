@@ -1,4 +1,13 @@
+@import url("https://use.typekit.net/vje7yoc.css");
+
+:root {
+  --color-low: #21A84A;
+  --color-intermediate: #F57D1F;
+  --color-high: #ED1F24;
+}
+
 html {
+  font-family: 'Proxima Nova', sans-serif;
   box-sizing: border-box;
 }
 
@@ -9,13 +18,291 @@ html {
 }
 
 body {
-  height: 100vh;
   margin: 0;
-  background-color: #21374b;
+  padding: 0 3rem;
+  text-align: center;
 }
 
 #canvas {
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  max-width: 650px;
   visibility: hidden;
+}
+
+[data-show-info],
+[data-show-risk] {
+  opacity: 0;
+
+  &[data-active] {
+    opacity: 1;
+  }
+}
+
+.state {
+  transition: opacity 300ms ease-in-out;
+}
+
+/* ELEMENTS
+=========================================== */
+
+#elements circle.inner {
+  fill: #e7e7e9;
+  stroke: #8f9194;
+  stroke-width: 3px;
+}
+
+#elements circle.outer {
+  fill: none;
+  stroke-width: 4px;
+}
+
+#elements .outer {
+  stroke: #8f9194;
+}
+
+#elements .arrow polygon {
+  fill: #8f9194;
+  transition: fill 300ms ease-in-out;
+  cursor: pointer;
+}
+
+/* RISK OPTIONS
+=========================================== */
+
+#risk-options .risk {
+  cursor: pointer;
+}
+
+#risk-options .risk .bg {
+  fill: #e7e7e9;
+  transition: fill 300ms ease-in-out;
+}
+
+#risk-options .risk .text {
+  font-size: 20px;
+  font-weight: 700;
+  fill: #5C5C5E;
+  user-select: none;
+  transition: fill 300ms ease-in-out;
+}
+
+[data-risk~="low"] {
+  --bg: var(--color-low);
+  --color: #fff;
+  #elements .outer {
+    stroke: var(--bg);
+  }
+  #elements .arrow polygon {
+    fill: var(--bg);
+  }
+
+  #risk-options .risk.low .bg {
+    fill: var(--bg);
+  }
+  #risk-options .risk.low .text {
+    fill: var(--color);
+  }
+}
+
+[data-risk~="intermediate"] {
+  --bg: var(--color-intermediate);
+  --color: #fff;
+  #elements .outer {
+    stroke: var(--bg);
+  }
+
+  #elements .arrow polygon {
+    fill: var(--bg);
+  }
+
+  #risk-options .risk.intermediate .bg {
+    fill: var(--bg);
+  }
+  #risk-options .risk.intermediate .text {
+    fill: var(--color);
+  }
+
+  #branches .node.active {
+    .dot,
+    text {
+      fill: var(--bg);
+    }
+
+    .branch,
+    .halo {
+      stroke: var(--bg);
+    }
+  }
+}
+
+[data-risk~="high"] {
+  --bg: var(--color-high);
+  --color: #fff;
+  #elements .outer {
+    stroke: var(--bg);
+  }
+
+  #elements .arrow polygon {
+    fill: var(--bg);
+  }
+
+  #risk-options .risk.high .bg {
+    fill: var(--bg);
+  }
+  #risk-options .risk.high .text {
+    fill: var(--color);
+  }
+
+  #branches .node.active {
+    .dot,
+    text {
+      fill: var(--bg);
+    }
+
+    .branch,
+    .halo {
+      stroke: var(--bg);
+    }
+  }
+}
+
+/* STATE TEXT
+=========================================== */
+
+.state .guy {
+  fill: #d7d7d7;
+}
+
+.state .text {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.state.low text {
+  fill: var(--color-low);
+}
+
+.state.intermediate text {
+  fill: var(--color-intermediate);
+}
+
+.state.high text {
+  fill: var(--color-high);
+}
+
+/* BRANCHES
+=========================================== */
+
+#branches .node {
+  cursor: pointer;
+}
+
+#branches .node text {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#branches .node .branch,
+#branches .node .halo {
+  stroke: #8f9194;
+  fill: none;
+  stroke-width: 1px;
+  transition: stroke 300ms ease-in-out;
+}
+
+#branches .node .dot,
+#branches .node text {
+  fill: #8f9194;
+  transition: fill 300ms ease-in-out;
+}
+
+[data-info~="echo"] {
+  #branches .node.echo .dot,
+  #branches .node.echo text {
+    fill: var(--bg);
+  }
+  
+  #branches .node.echo .branch,
+  #branches .node.echo .halo {
+    stroke: var(--bg);
+  }
+}
+
+[data-info~="functional"] {
+  #branches .node.functional .dot,
+  #branches .node.functional text {
+    fill: var(--bg);
+  }
+  
+  #branches .node.functional .branch,
+  #branches .node.functional .halo {
+    stroke: var(--bg);
+  }
+}
+
+[data-info~="six-minute"] {
+  #branches .node.six-minute .dot,
+  #branches .node.six-minute text {
+    fill: var(--bg);
+  }
+  
+  #branches .node.six-minute .branch,
+  #branches .node.six-minute .halo {
+    stroke: var(--bg);
+  }
+}
+
+[data-info~="cardio"] {
+  #branches .node.cardio .dot,
+  #branches .node.cardio text {
+    fill: var(--bg);
+  }
+  
+  #branches .node.cardio .branch,
+  #branches .node.cardio .halo {
+    stroke: var(--bg);
+  }
+}
+
+[data-info~="haemo"] {
+  #branches .node.haemo .dot,
+  #branches .node.haemo text {
+    fill: var(--bg);
+  }
+  
+  #branches .node.haemo .branch,
+  #branches .node.haemo .halo {
+    stroke: var(--bg);
+  }
+}
+
+[data-info~="nt-pro"] {
+  #branches .node.nt-pro .dot,
+  #branches .node.nt-pro text {
+    fill: var(--bg);
+  }
+  
+  #branches .node.nt-pro .branch,
+  #branches .node.nt-pro .halo {
+    stroke: var(--bg);
+  }
+}
+
+/* INFO TEXT
+=========================================== */
+
+#info-text {
+  font-size: 26px;
+}
+
+#info-text .results-range {
+  font-weight: 700;
+}
+
+/* KEY
+=========================================== */
+
+#key text {
+  font-size: 24px;
+  fill: #5c5c5e;
 }

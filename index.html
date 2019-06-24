@@ -6,10 +6,202 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.scss">
-  <title>Parcel Boilerplate</title>
+  <title>Interactive Tool</title>
 </head>
 <body>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1068.58691 218.40186" fill="#E7DACB"><title>Asset 1</title><path d="M134.10156,41.99756c25.2002,0,42.6001,17.40039,42.6001,42.60059v54.60059c0,25.2002-17.3999,42.60059-42.6001,42.60059H66.90088v76.20117H23.7002V41.99756Zm24,46.80078c0-18.6001-10.80029-29.40039-29.40039-29.40039H42.30029V240.6001h6V164.39893h80.40088c18.6001,0,29.40039-10.7998,29.40039-29.40039ZM128.70117,65.39795c15.00049,0,23.40039,8.40039,23.40039,23.40039v46.2002c0,15.00049-8.3999,23.40039-23.40039,23.40039H48.30029v-93.001Zm-5.3999,75.60107c6.6001,0,10.2002-3.6001,10.2002-10.2002V92.99854c0-6.6001-3.6001-10.2002-10.2002-10.2002H66.90088V140.999Z" transform="translate(-23.7002 -40.79785)"/><path d="M223.79834,258.00049H179.09766L248.69873,41.99756h50.40039L368.7002,258.00049h-46.501l-14.09961-48.60156H238.19873ZM343.19922,240.6001l-55.5-181.20215H260.09863L203.69824,240.6001h5.7002l15-48.60059H322.7998L337.499,240.6001ZM263.69873,65.39795,226.19824,185.99951H320.999L284.09912,65.39795Zm9.8999,24.00049,22.80029,79.20068h-46.2002Z" transform="translate(-23.7002 -40.79785)"/><path d="M509.99512,258.00049l-34.7998-80.10107H440.39453v80.10107h-43.2002V41.99756H507.2959c25.2002,0,42.59961,17.40039,42.59961,42.60059v50.70068c0,20.3999-11.39941,35.7002-29.39941,40.80029l36,81.90137Zm18.90039-17.40039-34.7998-79.80127h7.7998c18.60059,0,29.40039-10.7998,29.40039-29.3999V88.79834c0-18.6001-10.7998-29.40039-29.40039-29.40039H415.79492V240.6001h6V160.79883h66L522.5957,240.6001ZM525.2959,131.39893c0,15-8.40039,23.3999-23.40039,23.3999H421.79492V65.39795h80.10059c15,0,23.40039,8.40039,23.40039,23.40039Zm-28.80078,6.2998c6.60059,0,10.2002-3.6001,10.2002-10.2002v-34.5c0-6.6001-3.59961-10.2002-10.2002-10.2002H440.39453v54.90039Z" transform="translate(-23.7002 -40.79785)"/><path d="M697.49316,91.79834c0-6.6001-3.59961-10.2002-10.2002-10.2002h-46.7998c-6.60059,0-10.2002,3.6001-10.2002,10.2002V208.19971c0,6.59961,3.59961,10.19922,10.2002,10.19922H687.293c6.60059,0,10.2002-3.59961,10.2002-10.19922V181.79932h43.20117V216.6001c0,25.19922-17.40039,42.59961-42.60059,42.59961H629.69238c-25.2002,0-42.59961-17.40039-42.59961-42.59961V83.39844c0-25.20068,17.39941-42.60059,42.59961-42.60059h68.40137c25.2002,0,42.60059,17.3999,42.60059,42.60059v34.80029H697.49316Zm-4.7998-27.6001c15,0,23.40039,8.3999,23.40039,23.3999v13.80029h6V87.59814c0-18.6001-10.7998-29.40039-29.40039-29.40039H635.09277c-18.59961,0-29.40039,10.80029-29.40039,29.40039V212.39893c0,18.60059,10.80078,29.40039,29.40039,29.40039h57.60059c18.60059,0,29.40039-10.7998,29.40039-29.40039V199.19971h-6v13.19922c0,15.001-8.40039,23.40039-23.40039,23.40039H635.09277c-15,0-23.40039-8.39941-23.40039-23.40039V87.59814c0-15,8.40039-23.3999,23.40039-23.3999Z" transform="translate(-23.7002 -40.79785)"/><path d="M920.38965,41.99756V82.79834H822.28809v44.40039h79.501V167.999h-79.501v49.20068h98.10156v40.80078H779.08789V41.99756ZM901.78906,240.6001v-6H803.68848v-84.001h79.501v-6.00049h-79.501V65.39795h98.10059v-6H797.68848V240.6001Z" transform="translate(-23.7002 -40.79785)"/><path d="M1001.68555,41.99756V217.19971h90.60156v40.80078H958.48535V41.99756Zm72.001,198.60254v-6H983.08594V59.39795h-6V240.6001Z" transform="translate(-23.7002 -40.79785)"/></svg>
+  <svg id="canvas" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1626.4 1366.4" data-risk="loading" data-info="loading">
+    <g id="elements">
+      <circle class="inner" cx="844.7" cy="756.34" r="346.94"/>
+      <circle class="outer" cx="844.7" cy="756.34" r="412.86"/>
+
+      <g id="risk-options">
+          <g class="risk low">
+            <path class="bg" d="M596.83,662.9A423,423,0,0,1,563.4,503.31h-56A480.62,480.62,0,0,0,648.57,838a487.39,487.39,0,0,0,36.51,33l34.19-44.39q-16.15-13.27-31.1-28.21A424.76,424.76,0,0,1,596.83,662.9Z" transform="translate(-144.8 259.3)"/>
+            <g class="text">
+              <text transform="translate(405.94 892.71) rotate(72.12)">L</text>
+              <text transform="translate(409.95 905.13) rotate(70.2)">O</text>
+              <text transform="translate(416.12 922.21) rotate(67.74)">W</text>
+              <text transform="translate(424.47 942.21) rotate(65.88)"> </text>
+              <text transform="matrix(0.43, 0.9, -0.9, 0.43, 427.77, 949.61)">R</text>
+              <text transform="translate(434.77 964.01) rotate(62.84)">I</text>
+              <text transform="matrix(0.48, 0.88, -0.88, 0.48, 438.65, 971.56)">S</text>
+              <text transform="translate(445.95 984.84) rotate(59.4)">K</text>
+            </g>
+          </g><!-- risk low -->
+
+          <g class="risk intermediate">
+            <path class="bg" d="M1240.56,841.41a425.65,425.65,0,0,1-500.7,1.05l-34.21,44.4a481.83,481.83,0,0,0,569.3-1.19Z" transform="translate(-144.8 259.3)"/>
+            <g class="text">
+              <text transform="matrix(0.97, 0.25, -0.25, 0.97, 726.37, 1200.36)">I</text>
+              <text transform="translate(734.59 1202.53) rotate(12.99)">N</text>
+              <text transform="translate(751.97 1206.46) rotate(10.97)">T</text>
+              <text transform="translate(766.51 1209.22) rotate(9.12)">E</text>
+              <text transform="matrix(0.99, 0.13, -0.13, 0.99, 781.14, 1211.53)">R</text>
+              <text transform="matrix(1, 0.09, -0.09, 1, 797.1, 1213.53)">M</text>
+              <text transform="translate(817.42 1215.16) rotate(2.69)">E</text>
+              <text transform="translate(832.22 1215.83) rotate(0.65)">D</text>
+              <text transform="translate(849.78 1215.93) rotate(-0.98)">I</text>
+              <text transform="translate(858.28 1215.8) rotate(-2.58)">A</text>
+              <text transform="translate(873.81 1215.06) rotate(-4.4)">T</text>
+              <text transform="translate(888.57 1213.87) rotate(-6.26)">E</text>
+              <text transform="matrix(0.99, -0.13, 0.13, 0.99, 903.23, 1212.19)"> </text>
+              <text transform="matrix(0.99, -0.16, 0.16, 0.99, 911.27, 1211.12)">R</text>
+              <text transform="translate(927.07 1208.47) rotate(-10.73)">I</text>
+              <text transform="translate(935.4 1206.89) rotate(-12.21)">S</text>
+              <text transform="translate(950.21 1203.65) rotate(-14.14)">K</text>
+            </g>
+          </g><!-- risk intermediate -->
+
+          <g class="risk high">
+            <path class="bg" d="M1415.59,503.31a424.68,424.68,0,0,1-124.77,295.06q-14.29,14.29-29.73,27.08l34.37,44.25q18.16-14.94,35-31.74A480.62,480.62,0,0,0,1471.6,503.31Z" transform="translate(-144.8 259.3)"/>
+            <g class="text">
+              <text transform="translate(1227.97 1012.63) rotate(-57.14)">H</text>
+              <text transform="translate(1237.69 997.4) rotate(-58.82)">I</text>
+              <text transform="translate(1242.48 989.53) rotate(-60.46)">G</text>
+              <text transform="matrix(0.46, -0.89, 0.89, 0.46, 1250.89, 974.62)">H</text>
+              <text transform="translate(1259.13 958.46) rotate(-64.26)"> </text>
+              <text transform="translate(1262.54 951.44) rotate(-65.75)">R</text>
+              <text transform="translate(1269 936.89) rotate(-67.32)">I</text>
+              <text transform="matrix(0.36, -0.93, 0.93, 0.36, 1272.57, 928.36)">S</text>
+              <text transform="matrix(0.33, -0.94, 0.94, 0.33, 1277.53, 915.52)">K</text>
+            </g>
+          </g><!-- risk high -->
+      </g><!-- risk-options -->
+
+      <g id="branches">
+        <g class="node echo">
+          <polyline class="branch" points="507.32 675.12 403.21 598.83 374.21 598.83"/>
+          <circle class="halo" cx="374.21" cy="598.83" r="16.67"/>
+          <circle class="dot" cx="374.21" cy="598.83" r="5.85"/>
+          <text transform="translate(2.19 611.78)">ECHOCARDIOGRAM<tspan x="177.3" y="43.2">FINDINGS</tspan></text>
+        </g><!-- node echo -->
+
+        <g class="node six-minute">
+          <polyline class="branch" points="689.67 445.88 619.46 301.67 590.46 301.67"/>
+          <circle class="dot" cx="590.46" cy="301.67" r="5.85"/>
+          <circle class="halo" cx="590.46" cy="301.67" r="16.67"/>
+          <text transform="translate(149.3 314.05)">SIX-MINUTE WALK TEST<tspan x="279.14" y="43.2">(6MWT)</tspan></text>
+        </g><!-- node six-minute -->
+
+        <g class="node functional">
+          <polyline class="branch" points="566.13 549.51 483.75 458.18 454.75 458.18"/>
+          <circle class="dot" cx="454.75" cy="458.18" r="5.85"/>
+          <circle class="halo" cx="454.75" cy="458.18" r="16.67"/>
+          <text transform="translate(75.29 471.18)">FUNCTIONAL CLASS</text>
+        </g><!-- node functional -->
+        
+        <g class="node cardio">
+          <polyline class="branch" points="999.72 445.88 1069.93 301.67 1069.93 301.67 1098.93 301.67"/>
+          <circle class="dot" cx="1098.93" cy="301.67" r="5.85"/>
+          <circle class="halo" cx="1098.93" cy="301.67" r="16.67"/>
+          <text transform="translate(1130.32 314.05)">CARDIOPULMONARY<tspan x="0" y="43.2">EXERCISE TESTING (CPET)</tspan></text>
+        </g><!-- node cardio -->
+        
+        <g class="node haemo">
+          <polyline class="branch" points="1123.27 549.5 1205.64 458.18 1234.64 458.18"/>
+          <circle class="dot" cx="1234.64" cy="458.18" r="5.85"/>
+          <circle class="halo" cx="1234.64" cy="458.18" r="16.67"/>
+          <text transform="translate(1260.67 471.18)">HAEMODYNAMICS</text>
+        </g><!-- node haemo -->
+
+        <g class="node nt-pro">
+          <polyline class="branch" points="1182.07 675.12 1286.18 598.83 1315.18 598.83"/>
+          <circle class="dot" cx="1315.18" cy="598.83" r="5.85"/>
+          <circle class="halo" cx="1315.18" cy="598.83" r="16.67"/>
+          <text transform="translate(1341.2 611.78)">NT-pro BNP<tspan x="0" y="43.2">PLASMA LEVELS</tspan></text>
+        </g><!-- node nt-pro -->
+      </g><!-- branches -->
+
+      <g class="arrow">
+        <circle id="arrow-guide" cx="844.7" cy="756.3" r="527.2" style="fill: none"/>
+        <polygon points="844.8,1254.3 853.2,1268.8 861.5,1283.2 844.8,1283.2 828.1,1283.2 836.5,1268.8"/>
+      </g><!-- arrow -->
+
+      <g class="state low" data-show-risk="low">
+        <g class="guy">
+          <g id="wind">
+            <path d="M740.56,603.65a3.65,3.65,0,0,1-3.65,3.65H685.65a3.64,3.64,0,0,1-2.57-6.22,3.6,3.6,0,0,1,2.57-1.08h51.26A3.66,3.66,0,0,1,740.56,603.65Z" transform="translate(-144.8 259.3)"/>
+            <path d="M1079.56,649.65a3.69,3.69,0,0,1-1,2.58,3.42,3.42,0,0,1-2.48,1.07h-49.31a3.59,3.59,0,0,1-3.5-3.65,3.72,3.72,0,0,1,1-2.57,3.4,3.4,0,0,1,2.47-1.08h49.31A3.6,3.6,0,0,1,1079.56,649.65Z" transform="translate(-144.8 259.3)"/>
+            <path d="M1101.56,670.65a3.56,3.56,0,0,1-1.12,2.58,3.88,3.88,0,0,1-2.69,1.07h-53.51a3.74,3.74,0,0,1-3.8-3.65,3.55,3.55,0,0,1,1.12-2.57,3.84,3.84,0,0,1,2.68-1.08h53.51A3.75,3.75,0,0,1,1101.56,670.65Z" transform="translate(-144.8 259.3)"/>
+            <rect x="586.53" y="836.31" width="49.22" height="7.29" rx="3.34"/>
+            <rect x="549.81" y="754.31" width="96.95" height="7.29" rx="3.65"/>
+            <rect x="583.08" y="724.31" width="100.68" height="7.29" rx="3.65"/>
+            <rect x="526.08" y="701.31" width="100.68" height="7.29" rx="3.65"/>
+            <rect x="610.44" y="648.31" width="78.32" height="7.29" rx="3.22"/>
+            <rect x="919.98" y="948.3" width="31.77" height="7.3" rx="3.65"/>
+          </g>
+          <path id="leg-back" d="M880.42,565.89a.47.47,0,0,1-.12.28c-4.74,6.82-9.51,13.64-14.11,20.55L852,607.43l-8.09,11.79-.16.24c-.08.14-.18.25-.26.38l-.12.17a20.93,20.93,0,0,1-1.73,2.3l-.44.51c-.28.31-.57.6-.87.89l-.66.61c-.27.24-.54.49-.82.71a16.91,16.91,0,0,1-1.6,1.18,21.74,21.74,0,0,1-4.57,2.3l-.65.24-.1,0-76.33,27.73a21.69,21.69,0,0,1-27.7-12.94l-.18-.48a21.7,21.7,0,0,1,12.94-27.71l69.76-25.33,29.46-48.53c7.93,10.5,22.31,17.1,35,17.65.51,0,4.57,5.28,5.43,6.42A.52.52,0,0,1,880.42,565.89Z" transform="translate(-144.8 259.3)"/>
+          <path id="leg-front" d="M974.37,712.22a22.88,22.88,0,0,1-3.75.32,22.48,22.48,0,0,1-22.09-18.62l-13.4-78.47-54.79-58a22.38,22.38,0,0,1,32.55-30.73l58.2,61.65h0a22.24,22.24,0,0,1,7,12.75l14.58,85.29A22.46,22.46,0,0,1,974.37,712.22Z" transform="translate(-144.8 259.3)"/>
+          <path id="arm" d="M1015.36,474.53a19.29,19.29,0,0,1-19.22,19.22H919.51a18.89,18.89,0,0,1-5.9-.94l-.69-.23a19.14,19.14,0,0,1-10.64-9l-42.07-78.29a19.29,19.29,0,0,1,7.84-26.05,19,19,0,0,1,9.05-2.28,19.29,19.29,0,0,1,17,10.12l36.7,68.27h65.34A19.28,19.28,0,0,1,1015.36,474.53Z" transform="translate(-144.8 259.3)"/>
+          <g id="cart">
+            <path d="M1136.43,660.36a25.35,25.35,0,1,0,25.35,25.35A25.35,25.35,0,0,0,1136.43,660.36Zm0,38.54a13.19,13.19,0,1,1,13.18-13.19A13.19,13.19,0,0,1,1136.43,698.9Z" transform="translate(-144.8 259.3)"/>
+            <path d="M1202.43,660.36a25.35,25.35,0,1,0,25.35,25.35A25.35,25.35,0,0,0,1202.43,660.36Zm0,38.54a13.19,13.19,0,1,1,13.18-13.19A13.19,13.19,0,0,1,1202.43,698.9Z" transform="translate(-144.8 259.3)"/>
+            <path d="M1254,603.56H1106.66L1121,639.41h101.31a8.65,8.65,0,1,1,0,17.29h-113.9l-6.89-17.29-63.88-160.26h-16.31a21.24,21.24,0,0,0-4.69-20.74h32.22l8.27,20.74,9.87,24.76H1267Z" transform="translate(-144.8 259.3)"/>
+          </g>
+          <path id="body" d="M918,499a24.21,24.21,0,0,1-22.52-15.5l-40.77-76.88a24.79,24.79,0,0,1,10.07-33.48,24.49,24.49,0,0,1,11.64-2.93,24.78,24.78,0,0,1,21.85,13l35.11,65.34h.26l3.58-39.18a48,48,0,0,0-43.28-52l-.88-.08a48,48,0,0,0-52,43.29L832,500.21a48,48,0,0,0,43.29,52l.88.08a48,48,0,0,0,52-43.29l.91-10Z" transform="translate(-144.8 259.3)"/>
+          <circle id="head" cx="762.95" cy="559.81" r="41.5"/>
+        </g><!-- guy -->
+
+        <g class="text">
+          <text data-show-info="echo" transform="translate(788.74 941.76)">select 1</text>
+          <text data-show-info="functional" transform="translate(788.74 941.76)">select 2</text>
+          <text data-show-info="six-minute" transform="translate(788.74 941.76)">&gt;440 m</text>
+          <text data-show-info="cardio" transform="translate(788.74 941.76)">select 4</text>
+          <text data-show-info="haemo" transform="translate(788.74 941.76)">select 5</text>
+          <text data-show-info="nt-pro" transform="translate(788.74 941.76)">select 6</text>
+        </g><!-- text -->
+      </g><!-- state low -->
+
+      <g class="state intermediate" data-show-risk="intermediate">
+        <g class="guy intermediate">
+          <path id="leg" d="M941.43,527.1l35.34,34.41-38.71,67.21-2.95,4L882,705.08a23.89,23.89,0,0,1-38.13-28.78L896,606.22c.27-.55.56-1.09.87-1.63Z" transform="translate(-144.8 259.3)"/>
+          <path id="body" d="M1094,715.59A23.85,23.85,0,0,1,1063.55,701l-33.66-95.4-46.15-44.17-.1-.1-39.93-38.87,0-113.48-45.37,26.27-6.39,72.84A19.5,19.5,0,0,1,853.06,506a20.41,20.41,0,0,1,.12-2.2l7.7-81.87c0-.07,0-.13,0-.2l0-.47a19.42,19.42,0,0,1,9.63-15L948,359.36a9.07,9.07,0,0,1,5.73-1.44h21.74A35.69,35.69,0,0,1,1011,393.51v38.55l69.73,59.71A19.89,19.89,0,1,1,1054.86,522L1011,486v29.76l57,60.51a17.85,17.85,0,0,1,2.44,3,25.21,25.21,0,0,1,1.82,4.59l36.35,101.23A23.88,23.88,0,0,1,1094,715.59Z" transform="translate(-144.8 259.3)"/>
+          <circle id="head" cx="837.49" cy="562.33" r="43.07"/>
+        </g><!-- guy -->
+
+        <g class="text">
+            <text data-show-info="echo" transform="translate(788.74 941.76)">select 1</text>
+            <text data-show-info="functional" transform="translate(788.74 941.76)">select 2</text>
+            <text data-show-info="six-minute" transform="translate(765.97 941.76)">165-440 m</text>
+            <text data-show-info="cardio" transform="translate(788.74 941.76)">select 4</text>
+            <text data-show-info="haemo" transform="translate(788.74 941.76)">select 5</text>
+            <text data-show-info="nt-pro" transform="translate(788.74 941.76)">select 6</text>
+          </g><!-- text -->
+      </g><!-- state intermediate -->
+
+      <g class="state high" data-show-risk="high">
+        <g class="guy">
+          <path id="stool" d="M976.71,570.43h6a6.74,6.74,0,1,0,0-13.48H878.88a6.74,6.74,0,0,0,0,13.48h5.23l-25.42,164,13.56,2.1,7.58-48.92H981l7.58,48.92,13.56-2.1ZM882.23,672.15,898,570.43h64.82l15.77,101.72Z" transform="translate(-144.8 259.3)"/>
+          <circle id="head-3" data-name="head" cx="843.76" cy="579.65" r="45.39"/>
+          <path id="arm-2" data-name="arm" d="M1072.4,519.89a17.12,17.12,0,0,1-21.11,11.83L974.39,509l-.61-.18a17.15,17.15,0,0,1-12.24-10.29l-33.61-83.66a17.17,17.17,0,0,1,9.45-22.28,17,17,0,0,1,6.36-1.24A17.18,17.18,0,0,1,959.66,402l30.45,75.82,70.46,20.93A17.15,17.15,0,0,1,1072.4,519.89Z" transform="translate(-144.8 259.3)"/>
+          <path d="M893.64,543.13c-2.23-4-3.67-8-3.78-11A84.78,84.78,0,0,0,893.64,543.13Z" transform="translate(-144.8 259.3)"/>
+          <path d="M1071.34,531.44v.33a23.59,23.59,0,0,1-.13,2.42,38.53,38.53,0,0,1-.61,4l-.88,3.73-30,127.5a26.6,26.6,0,1,1-51.81-12.12l21.9-93.65h-93c-7.29,0-17.6-10.6-23.09-20.51a84.78,84.78,0,0,1-3.78-11c-3.33-12.18-4.36-25.19-4.79-37.58a255,255,0,0,1,4.75-59.51c3.69-18.18,9.22-37.07,22.45-50.74,12.16-12.57,36.38-25,52.73-13.08a28.07,28.07,0,0,1,10,15.08c2.21,7.6,2.19,24.52.92,43.76-4.87-12.05-9.39-23.22-11.75-29.07a21.65,21.65,0,0,0-1.05-2.64,16.42,16.42,0,0,0-4.42-6.11A21.56,21.56,0,0,0,922.17,407c0,.22,0,.45,0,.68v.15q0,.48,0,1c0,.31,0,.62.07.92s0,.48.08.71c.46,3.49,2,6.34,3.3,9.54,1.47,3.55,2.87,7.15,4.31,10.72L935.31,444q3.09,7.68,6.19,15.34t6.22,15.4q2.73,6.73,5.45,13.48l3.85,9.54,1.47,3.63a18.21,18.21,0,0,0,4.39,6.43v3.84h6c.38.11,2.48.76,2.87.84l.66.19,81.22,22.89a18.4,18.4,0,0,0,17.73-4.43C1071.33,531.24,1071.34,531.34,1071.34,531.44Z" transform="translate(-144.8 259.3)"/>
+        </g><!-- guy -->
+
+        <g class="text">
+          <text data-show-info="echo" transform="translate(788.74 941.76)">select 1</text>
+          <text data-show-info="functional" transform="translate(660.47 941.76)">Class IV - Symptoms with<tspan x="10.78" y="38.4">any activity or even rest</tspan></text>
+          <text data-show-info="six-minute" transform="translate(791.54 941.76)">&lt;160 m</text>
+          <text data-show-info="cardio" transform="translate(788.74 941.76)">select 4</text>
+          <text data-show-info="haemo" transform="translate(788.74 941.76)">select 5</text>
+          <text data-show-info="nt-pro" transform="translate(788.74 941.76)">select 6</text>
+        </g><!-- text -->
+      </g><!-- state high -->
+    </g><!-- elements -->
+
+    <g id="info-text">
+      <text class="results-range" transform="translate(757.01 867.93)">Results Range</text>
+      <g class="messages">
+        <text class="message-bottom" transform="translate(611.7 710.78)">Provides a measure of your response to<tspan x="43.04" y="31.2">the treatments you are receiving</tspan></text>
+        <text class="message-top" transform="translate(689.67 615.78)">Measures how far you can<tspan x="51.49" y="31.2">walk in 6 minutes</tspan></text>
+      </g>
+    </g><!-- info-text -->
+    
+    <g id="key">
+      <text transform="translate(778.53 1366.4)">m = Meters</text>
+    </g><!-- key -->
+  </svg>
+  
   <script src="index.js"></script>
 </body>
 </html>

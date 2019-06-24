@@ -22,12 +22,14 @@
   },
   "homepage": "https://github.com/ryanzola/parcel-boilerplate#readme",
   "dependencies": {
-    "gsap": "^2.0.2"
+    "gsap": "^2.0.2",
+    "src": "^1.1.2",
+    "xstate": "^4.6.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "parcel-bundler": "^1.10.3",
+    "parcel-bundler": "^1.12.3",
     "sass": "^1.16.0"
   }
 }
