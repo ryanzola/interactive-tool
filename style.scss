@@ -19,7 +19,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0 3rem;
+  padding: 3rem;
   text-align: center;
 }
 
@@ -38,29 +38,49 @@ body {
   }
 }
 
-.state {
+/* TRANSITIONS
+=========================================== */
+
+#guys .guy,
+#stateful-messages text,
+#stateful-result g,
+#stateful-result text {
   transition: opacity 300ms ease-in-out;
+}
+
+#main-elements #outer,
+#info-titles .node {
+  transition: fill 300ms ease-in-out;
+}
+
+#branches .branch,
+#branches .halo {
+  transition: stroke 300ms ease-in-out;
 }
 
 /* ELEMENTS
 =========================================== */
 
-#elements circle.inner {
+#main-elements #inner {
   fill: #e7e7e9;
   stroke: #8f9194;
   stroke-width: 3px;
 }
 
-#elements circle.outer {
+#main-elements #outer {
   fill: none;
   stroke-width: 4px;
-}
-
-#elements .outer {
   stroke: #8f9194;
 }
 
-#elements .arrow polygon {
+/* ARROW
+=========================================== */
+
+#arrow circle {
+  visibility: hidden;
+}
+
+#arrow polygon {
   fill: #8f9194;
   transition: fill 300ms ease-in-out;
   cursor: pointer;
@@ -86,19 +106,115 @@ body {
   transition: fill 300ms ease-in-out;
 }
 
+/* GUYS
+=========================================== */
+
+#guys .guy {
+  fill: #d7d7d7;
+}
+
+/* INFO TITLES
+=========================================== */
+
+#info-titles text {
+  cursor: pointer;
+  font-size: 36px;
+  fill: #8f9194;
+  font-weight: 700;
+
+}
+
+#info-titles text {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#info-titles .node.nt-pro.bottom {
+  font-size: 21px;
+}
+
+/* BRANCHES
+=========================================== */
+
+#branches .branch {
+  stroke: #8f9194;
+  fill: none;
+  stroke-width: 1px;
+  transition: stroke 300ms ease-in-out;
+}
+
+#branches .halo {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 1px;
+}
+
+#branches .dot {
+  fill: #8f9194;
+  transition: fill 300ms ease-in-out;
+}
+
+/* INFO STATEFUL MESSAGES
+=========================================== */
+#stateful-messages {
+  font-size: 26px;
+}
+
+
+/* INFO STATEFUL RESULT
+=========================================== */
+
+#stateful-result text {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+#stateful-result .low {
+  fill: var(--color-low);
+}
+
+#stateful-result .intermediate {
+  fill: var(--color-intermediate);
+}
+
+#stateful-result .intermediate .functional {
+  font-size: 24px;
+}
+
+#stateful-result .high {
+  fill: var(--color-high);
+}
+
+/* STATIC TEXT
+=========================================== */
+
+#results-range {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+#key {
+  font-size: 26px;
+}
+
+/* RISK STATES
+=========================================== */
+
 [data-risk~="low"] {
   --bg: var(--color-low);
   --color: #fff;
-  #elements .outer {
+  #main-elements #outer {
     stroke: var(--bg);
   }
-  #elements .arrow polygon {
+
+  #arrow polygon {
     fill: var(--bg);
   }
 
   #risk-options .risk.low .bg {
     fill: var(--bg);
   }
+
   #risk-options .risk.low .text {
     fill: var(--color);
   }
@@ -107,202 +223,133 @@ body {
 [data-risk~="intermediate"] {
   --bg: var(--color-intermediate);
   --color: #fff;
-  #elements .outer {
+  #main-elements #outer {
     stroke: var(--bg);
   }
 
-  #elements .arrow polygon {
+  #arrow polygon {
     fill: var(--bg);
   }
 
   #risk-options .risk.intermediate .bg {
     fill: var(--bg);
   }
+
   #risk-options .risk.intermediate .text {
     fill: var(--color);
-  }
-
-  #branches .node.active {
-    .dot,
-    text {
-      fill: var(--bg);
-    }
-
-    .branch,
-    .halo {
-      stroke: var(--bg);
-    }
   }
 }
 
 [data-risk~="high"] {
   --bg: var(--color-high);
   --color: #fff;
-  #elements .outer {
+  #main-elements #outer {
     stroke: var(--bg);
   }
 
-  #elements .arrow polygon {
+  #arrow polygon {
     fill: var(--bg);
   }
 
   #risk-options .risk.high .bg {
     fill: var(--bg);
   }
+
   #risk-options .risk.high .text {
     fill: var(--color);
   }
-
-  #branches .node.active {
-    .dot,
-    text {
-      fill: var(--bg);
-    }
-
-    .branch,
-    .halo {
-      stroke: var(--bg);
-    }
-  }
 }
 
-/* STATE TEXT
+/* INFO STATES
 =========================================== */
-
-.state .guy {
-  fill: #d7d7d7;
-}
-
-.state .text {
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.state.low text {
-  fill: var(--color-low);
-}
-
-.state.intermediate text {
-  fill: var(--color-intermediate);
-}
-
-.state.high text {
-  fill: var(--color-high);
-}
-
-/* BRANCHES
-=========================================== */
-
-#branches .node {
-  cursor: pointer;
-}
-
-#branches .node text {
-  font-size: 36px;
-  font-weight: 700;
-}
-
-#branches .node .branch,
-#branches .node .halo {
-  stroke: #8f9194;
-  fill: none;
-  stroke-width: 1px;
-  transition: stroke 300ms ease-in-out;
-}
-
-#branches .node .dot,
-#branches .node text {
-  fill: #8f9194;
-  transition: fill 300ms ease-in-out;
-}
 
 [data-info~="echo"] {
-  #branches .node.echo .dot,
-  #branches .node.echo text {
+  #info-titles .echo {
+    fill: var(--bg);
+  }
+
+  #branches .echo .dot {
     fill: var(--bg);
   }
   
-  #branches .node.echo .branch,
-  #branches .node.echo .halo {
+  #branches .echo .branch,
+  #branches .echo .halo {
     stroke: var(--bg);
+    transform: scale(1);
   }
 }
 
 [data-info~="functional"] {
-  #branches .node.functional .dot,
-  #branches .node.functional text {
+  #info-titles .functional {
+    fill: var(--bg);
+  }
+
+  #branches .functional .dot {
     fill: var(--bg);
   }
   
-  #branches .node.functional .branch,
-  #branches .node.functional .halo {
+  #branches .functional .branch,
+  #branches .functional .halo {
     stroke: var(--bg);
   }
 }
 
 [data-info~="six-minute"] {
-  #branches .node.six-minute .dot,
-  #branches .node.six-minute text {
+  #info-titles .six-minute {
+    fill: var(--bg);
+  }
+
+  #branches .six-minute .dot {
     fill: var(--bg);
   }
   
-  #branches .node.six-minute .branch,
-  #branches .node.six-minute .halo {
+  #branches .six-minute .branch,
+  #branches .six-minute .halo {
     stroke: var(--bg);
   }
 }
 
 [data-info~="cardio"] {
-  #branches .node.cardio .dot,
-  #branches .node.cardio text {
+  #info-titles .cardio {
+    fill: var(--bg);
+  }
+
+  #branches .cardio .dot {
     fill: var(--bg);
   }
   
-  #branches .node.cardio .branch,
-  #branches .node.cardio .halo {
+  #branches .cardio .branch,
+  #branches .cardio .halo {
     stroke: var(--bg);
   }
 }
 
 [data-info~="haemo"] {
-  #branches .node.haemo .dot,
-  #branches .node.haemo text {
+  #info-titles .haemo {
+    fill: var(--bg);
+  }
+
+  #branches .haemo .dot {
     fill: var(--bg);
   }
   
-  #branches .node.haemo .branch,
-  #branches .node.haemo .halo {
+  #branches .haemo .branch,
+  #branches .haemo .halo {
     stroke: var(--bg);
   }
 }
 
 [data-info~="nt-pro"] {
-  #branches .node.nt-pro .dot,
-  #branches .node.nt-pro text {
+  #info-titles .nt-pro {
+    fill: var(--bg);
+  }
+
+  #branches .nt-pro .dot {
     fill: var(--bg);
   }
   
-  #branches .node.nt-pro .branch,
-  #branches .node.nt-pro .halo {
+  #branches .nt-pro .branch,
+  #branches .nt-pro .halo {
     stroke: var(--bg);
   }
-}
-
-/* INFO TEXT
-=========================================== */
-
-#info-text {
-  font-size: 26px;
-}
-
-#info-text .results-range {
-  font-weight: 700;
-}
-
-/* KEY
-=========================================== */
-
-#key text {
-  font-size: 24px;
-  fill: #5c5c5e;
 }

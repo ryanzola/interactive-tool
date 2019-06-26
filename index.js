@@ -12,9 +12,9 @@ const selectAll = s => document.querySelectorAll(s);
 ====================================================== */
 
 const canvas = select('svg');
-const arrowPath = select('.arrow');
-const arrow = select('.arrow polygon');
-const nodes = selectAll('.node');
+const arrowPath = select('#arrow');
+const arrow = select('#arrow polygon');
+const nodes = selectAll('#info-titles text');
 const risks = selectAll('.risk');
 
 /* STATE MACHINE
@@ -227,19 +227,15 @@ function activate(state) {
   canvas.dataset.info = state.value.info
 
   // When the overall state matches a [data-show="..."] state, the element should have the data-active attribute.
-  document.querySelectorAll('#elements [data-active]').forEach(el => {
+  document.querySelectorAll('#canvas [data-active]').forEach(el => {
     el.removeAttribute('data-active')
   })
 
-  document.querySelectorAll(`#elements [data-show-risk~="${state.value.risk}"]`).forEach(el => {
+  document.querySelectorAll(`#canvas [data-show-risk~="${state.value.risk}"]`).forEach(el => {
     el.setAttribute('data-active', true)
   })
 
-  document.querySelectorAll('#elements .text [data-active]').forEach(el => {
-    el.removeAttribute('data-active')
-  })
-
-  document.querySelectorAll(`#elements .text [data-show-info~="${state.value.info}"]`).forEach(el => {
+  document.querySelectorAll(`#canvas [data-show-info~="${state.value.info}"]`).forEach(el => {
     el.setAttribute('data-active', true)
   })
 }
