@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ryanzola/parcel-boilerplate#readme",
   "dependencies": {
-    "gsap": "^2.0.2",
+    "gsap": "^3.6.0",
     "src": "^1.1.2",
     "xstate": "^4.6.2"
   },
